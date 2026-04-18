@@ -1,4 +1,5 @@
 <script setup>
+import Imageshare from './components/Imageshare.vue';
 import Issue from './components/Issue.vue';
 import SmartTradeNavbar from './components/SmartTradeNavbar.vue'
 </script>
@@ -6,8 +7,9 @@ import SmartTradeNavbar from './components/SmartTradeNavbar.vue'
 <template>
             
     <SmartTradeNavbar/>
-    <!-- <router-view /> -->
-            <Issue/>
+    <router-view />
+     <!-- <Imageshare/> -->
+            
 </template>
 
 <style scoped lang="scss">

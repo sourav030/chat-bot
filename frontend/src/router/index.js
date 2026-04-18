@@ -4,6 +4,8 @@ import TalkToAgent from '../page/TalkToAgent.vue'
 import ScheduleCall from '../page/ScheduleCall.vue'
 import ScheduleSuccess from '../page/ScheduleSuccess.vue'
 import Chat from '../page/Chat.vue'
+import Issue from '../components/Issue.vue'
+import Imageshare from '../components/Imageshare.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -32,6 +34,16 @@ const router = createRouter({
             path:'/chat',
             name:'chat',
             component:Chat
+        },
+        {
+            path:'/issue',
+            name:'issue',
+            component:Issue
+        },
+        {
+            path:'/image',
+            name:'imageShare',
+            component:Imageshare
         }
     ],
 })

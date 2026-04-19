@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import AddressForm from '../components/AddressForm.vue';
+import RepairEstimated from '../components/RepairEstimated.vue';
+import ReplaceEstimated from '../components/ReplaceEstimated.vue'
 </script>
 
 <template>
@@ -31,9 +32,16 @@ import AddressForm from '../components/AddressForm.vue';
                             </div>
                             <div class="text-message">
                                 <div>
-                                    Please confirm the address where you need service
+                                    Based on what you share here is estimated range for replacement
                                 </div>
-                                <AddressForm />
+                                
+                                <ReplaceEstimated/>
+                                
+                                <div class="boxes">
+                                    <p>
+                                        Prefer to speak with someone? Our team can review your case with you <span>Talk to an Expert</span>
+                                    </p>
+                                </div>
                             </div>
 
                         </div>
@@ -73,24 +81,22 @@ main {
     justify-content: center;
 }
 
-.text-message {
+.text-message{
     display: flex;
     flex-direction: column;
-
+    
 }
-
-.text-message div {
+.text-message div{
     font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
 }
-
 .outer-container {
     width: 100%;
     max-width: 680px;
-    height: 608px;
+    height: 870px;
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -104,7 +110,7 @@ main {
 .inner-container {
     width: 100%;
     max-width: 648px;
-    height: 576px;
+    height: 838px;
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -115,17 +121,14 @@ main {
     border: 1px solid #F3F4F6;
 
 }
+.third{
+     width: 616px;
+  height: 743px;
 
-.third {
-    width: 616px;
-    height: 480px;
-
-    display: flex;
-    flex-direction: column;
-    /* important for vertical stacking */
-    gap: 8px;
+  display: flex;
+  flex-direction: column; /* important for vertical stacking */
+  gap: 8px;
 }
-
 .toggle-wrapper {
     width: 100%;
     max-width: 616px;
@@ -353,56 +356,58 @@ main {
     gap: 10px;
 }
 
-.message-wrapper {
-    padding-top: 16px;
-    max-width: 574px;
-    height: 359px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-
-
+.but{
+  width: 576px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* title on left, action on right */
+  gap: 9px;
+  padding-top: 2px
 }
+.but button{
+    width: 576px;
+  height: 48px;
 
-.gradient {
-    width: 427px;
-    height: 152px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: #FFFFFF;
-
-    backdrop-filter: blur(73px);
-
-    opacity: 1;
+  padding: 0 15px; /* better than full 15px for vertical alignment */
+  color: white;
+  background: #6d28d9;
+  border-radius: 12px;
 }
+.boxes{
+     width: 577px;
+  min-height: 66px;
 
-.message-wrapper span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px;
+  border-radius: 16px;
+}
+.boxes p{
     width: 542px;
-    height: 110px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    color: #1F2937;
-    /* gradient simplifies to solid */
-    opacity: 1;
-}
+  height: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
 
-.issue-wrapper {
-    width: 100%;
-    max-width: 574px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
-
-.button-collection {
-    display: flex;
-    width: 100%;
-    max-width: 574px;
-    height: 46px;
-    gap: 16px;
+.boxes p span{
+     width: 542px;
+  height: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: rgb(134, 134, 228);
 }
 </style>

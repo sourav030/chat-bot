@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AddressForm from '../components/AddressForm.vue';
+import TimeComponent from '../components/TimeComponent.vue';
 </script>
 
 <template>
@@ -31,9 +32,9 @@ import AddressForm from '../components/AddressForm.vue';
                             </div>
                             <div class="text-message">
                                 <div>
-                                    Please confirm the address where you need service
+                                   Here are the next available appointments for your area
                                 </div>
-                                <AddressForm />
+                                <TimeComponent/>
                             </div>
 
                         </div>

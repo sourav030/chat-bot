@@ -9,6 +9,8 @@ import Imageshare from '../page/Imageshare.vue'
 import Address from '../page/Address.vue'
 import Comparsion from '../page/Comparsion.vue'
 import Repair from '../page/Repair.vue'
+import Replace from '../page/Replace.vue'
+import Time from '../page/Time.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -54,7 +56,7 @@ const router = createRouter({
             component:Address
         },
         {
-            path:'/comparision',
+            path:'/comparsion',
             name:'compairision',
             component:Comparsion
         },
@@ -62,6 +64,16 @@ const router = createRouter({
             path:'/repair',
             name:'repair',
             component: Repair
+        },
+        {
+            path:'/replace',
+            name:'replace',
+            component:Replace
+        },
+        {
+           path:'/time',
+           name:'time',
+           component:Time  
         }
     ],
 })

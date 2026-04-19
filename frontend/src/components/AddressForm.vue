@@ -25,7 +25,7 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .outer-box {
     width: 576px;
     height: 335px;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import Replace from './Replace.vue';
-
+import Compare from '../components/Compare.vue';
 </script>
 
 <template>
@@ -44,7 +44,7 @@
                             </div>
                             <span class="txt-size">Based on your water heater's condition and age , here are your best
                                 option</span>
-                            <!-- <Replace /> -->
+                            <Compare/>
                                 
                             <p class="text-size ">Beacause your heater appear to be an older tank unit and the issue is
                                 reduced hot water

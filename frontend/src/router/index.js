@@ -7,6 +7,8 @@ import Chat from '../page/Chat.vue'
 import Issue from '../page/Issue.vue'
 import Imageshare from '../page/Imageshare.vue'
 import Address from '../page/Address.vue'
+import Comparsion from '../page/Comparsion.vue'
+import Repair from '../page/Repair.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -50,6 +52,16 @@ const router = createRouter({
             path:'/address',
             name:'address',
             component:Address
+        },
+        {
+            path:'/comparision',
+            name:'compairision',
+            component:Comparsion
+        },
+        {
+            path:'/repair',
+            name:'repair',
+            component: Repair
         }
     ],
 })

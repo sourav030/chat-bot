@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import EstimatedCost from './EstimatedCost.vue';
+import RepairEstimated from '../components/RepairEstimated.vue';
 
 </script>
 
@@ -34,10 +34,8 @@
                                 <div>
                                     Based on what you share here is estimated range for repair
                                 </div>
-                                <!-- <EstimatedCost/> -->
-                                <div class="but">
-                                    <button>Schedule Repair Visit</button>
-                                </div>
+                                <RepairEstimated/>
+                                
                                 <div class="boxes">
                                     <p>
                                         Prefer to speak with someone? Our team can review your case with you <span>Talk to an Expert</span>

@@ -1,6 +1,7 @@
-<script setup >
-// import EstimatedCost from './EstimatedCost.vue';
-
+<script setup lang="ts">
+import AppointmentComponent from '../components/AppointmentComponent.vue';
+import RepairEstimated from '../components/RepairEstimated.vue';
+import ReplaceEstimated from '../components/ReplaceEstimated.vue'
 </script>
 
 <template>
@@ -31,17 +32,12 @@
                                 <img src="../assets/Ring.png" alt="">
                             </div>
                             <div class="text-message">
-                                <div>
-                                    Based on what you share here is estimated range for replacement
+                                <div class="msge">
+                                    Almost done. Take a quick look and make sure everything looks right before i lock in your visit
                                 </div>
 
-                                
-                                <div class="boxes">
-                                    <p>
-                                        Prefer to speak with someone? Our team can review your case with you <span>Talk
-                                            to an Expert</span>
-                                    </p>
-                                </div>
+                                <AppointmentComponent/>
+
                             </div>
 
                         </div>
@@ -80,11 +76,10 @@ main {
     display: flex;
     justify-content: center;
 }
-
 .text-message {
     display: flex;
     flex-direction: column;
-
+    
 }
 
 .text-message div {
@@ -127,7 +122,7 @@ main {
 .third {
     width: 616px;
     height: 743px;
-
+    
     display: flex;
     flex-direction: column;
     /* important for vertical stacking */
@@ -153,7 +148,7 @@ main {
     justify-content: space-between;
     padding-top: 13px;
     gap: 20px;
-
+    
 }
 
 .toggle-wrapper div {
@@ -260,14 +255,14 @@ main {
 .image {
     width: 42px;
     height: 42px;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
 
     padding: 10px 12px;
-
+    
     background: #FFFFFF;
     border: 1px solid #DDD6FE;
     border-radius: 60px;
@@ -337,12 +332,12 @@ main {
     overflow: hidden;
     border-radius: 50%;
     background:
-        radial-gradient(circle at 42% 35%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.25) 24%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at 42% 35%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.25) 24%, rgba(255, 255, 255, 0) 58%),
         radial-gradient(circle at 72% 76%, rgba(255, 251, 133, 0.42) 0%, rgba(255, 251, 133, 0) 58%),
         radial-gradient(circle at 18% 74%, rgba(109, 40, 217, 0.42) 0%, rgba(109, 40, 217, 0) 56%),
         linear-gradient(135deg, #ffffff 0%, #f3e8ff 42%, #ddd6fe 72%, #c4b5fd 100%);
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
         inset 0 -3px 6px rgba(109, 40, 217, 0.15);
 }
 
@@ -375,11 +370,11 @@ main {
 .but button {
     width: 576px;
     height: 48px;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     padding: 0 15px;
     /* better than full 15px for vertical alignment */
     color: white;
@@ -390,11 +385,11 @@ main {
 .boxes {
     width: 577px;
     min-height: 66px;
-
+    
     display: flex;
     align-items: center;
     gap: 10px;
-
+    
     padding: 16px;
     border-radius: 16px;
 }
@@ -407,7 +402,7 @@ main {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.02em;
-
+    
 }
 
 .boxes p span {
@@ -420,5 +415,13 @@ main {
     letter-spacing: 0.02em;
     text-decoration: underline;
     color: rgb(134, 134, 228);
+}
+.msge{
+     font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
 }
 </style>

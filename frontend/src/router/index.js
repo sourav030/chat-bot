@@ -11,6 +11,9 @@ import Comparsion from '../page/Comparsion.vue'
 import Repair from '../page/Repair.vue'
 import Replace from '../page/Replace.vue'
 import Time from '../page/Time.vue'
+import Appointment from '../page/Appointment.vue'
+import AppointmentSchedule from '../page/AppointmentSchedule.vue'
+import ConfirmationPage from '../page/ConfirmationPage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -74,6 +77,21 @@ const router = createRouter({
            path:'/time',
            name:'time',
            component:Time  
+        },
+        {
+            path:'/appointment',
+            name:'appointment',
+            component: Appointment
+        },
+        {
+            path:'/appoint-schedule',
+            name:'appointment',
+            component:AppointmentSchedule
+        },
+        {
+            path:'/confirm',
+            name:'confimr',
+            component:ConfirmationPage
         }
     ],
 })

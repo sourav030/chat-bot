@@ -110,7 +110,7 @@
 }
 
 .nav span {
-    width: 148px;
+    width: 200px;
     height: 20px;
 
     font-family: 'Nunito', sans-serif;
